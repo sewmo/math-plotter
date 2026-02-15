@@ -26,6 +26,6 @@ Camera movement is controlled via the WASD keys, allowing the user to navigate t
 # Installation
 Download the .ZIP file, extract it, and run the 'plot' executable, providing the necessary parameters.
 
-# Image
-<img width="803" height="827" alt="image" src="https://github.com/user-attachments/assets/9be9ab7a-2419-4428-9866-f8066925c08a" />
+# Showcase
+[Preview](preview.png)
 
