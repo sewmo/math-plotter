@@ -10,7 +10,7 @@
 #define SCREEN_HEIGHT 800
 #define SCREEN_ORIGIN_X (SCREEN_WIDTH / 2)
 #define SCREEN_ORIGIN_Y (SCREEN_HEIGHT / 2)
-#define WINDOW_TITLE "Math Plotter" 
+#define WINDOW_TITLE "Function Plotter" 
 #define FONT_PATH "assets/JetBrainsMono-Bold.ttf" 
 
 typedef struct {
@@ -54,6 +54,7 @@ int main(int argc, char** argv) {
     printf("Expression to be evaluated: %s\n", argv[1]);
 
     if (argc > 2) {
+        printf("Function color: %s\n", argv[2]);
         if ((strcmp(argv[2], "BLUE")) == 0) functionColor = (SDL_Color){0, 0, 150, 255};
         else if ((strcmp(argv[2], "RED")) == 0) functionColor = (SDL_Color){235, 0, 0, 255};
         else if ((strcmp(argv[2], "BLACK")) == 0) functionColor = (SDL_Color){0, 0, 0, 255};
@@ -62,8 +63,6 @@ int main(int argc, char** argv) {
     } else {
         functionColor = (SDL_Color){235, 0, 0, 255};
     }
-
-    printf("Function color: %s\n", argv[2]);
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -104,7 +103,7 @@ int main(int argc, char** argv) {
     mouseText.surface = TTF_RenderText_Solid(font, mouseText.buffer, mouseText.color);
     mouseText.texture = SDL_CreateTextureFromSurface(renderer, mouseText.surface);
 
-    printf("Starting math plotter...\n");
+    printf("Starting function plotter...\n");
 
     int smx, smy;
     int prev_smx, prev_smy;
@@ -159,7 +158,7 @@ int main(int argc, char** argv) {
         SDL_RenderPresent(renderer);
     }   
 
-    printf("Exiting math plotter...\n");
+    printf("Exiting function plotter...\n");
 
     cleanupSDL(window, renderer, &zoomText, &exprText, &mouseText);
 

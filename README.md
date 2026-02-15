@@ -1,5 +1,5 @@
 # Description
-A minimalistic 300-line  math plotter built in C with the SDL2 framework and the TinyExpr library.
+A minimalistic 300-line function plotter built in C with the SDL2 framework and the TinyExpr library.
 
 # Specifications
 This project was built with the **Simple DirectMedia Layer** framework (SDL2).  
